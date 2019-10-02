@@ -1,1 +1,42 @@
-cstange!
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Carlos Stange</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<div id="wrapper">
+			<div id="bg"></div>
+			<div id="overlay"></div>
+			<div id="main">
+				<header id="header">
+					<h1>CARLOS STANGE</h1>
+					<p>Ingeniero Civil Informático</p>
+					<img src="vcard.png" alt="Contacto"></img>
+				</header>
+				<canvas id="myCanvasMatrix" width="500" height="200" style="border:1px solid #c3c3c3;">
+Please Upgrade your browser
+</canvas>
+			</div>
+		</div>
+		<script>
+			window.onload = function() { document.body.classList.remove('is-preload'); }
+			window.ontouchmove = function() { return false; }
+			window.onorientationchange = function() { document.body.scrollTop = 0; }
+			
+			var c1=document.getElementById("myCanvasMatrix");
+var ctx1=c1.getContext("2d");
+var Matrix=function(){
+ctx1.fillStyle='rgba(0,0,0,.05)';
+ctx1.fillRect(0,0,500,500);
+ctx1.fillStyle="#0f0";
+ctx1.fillText('Matrix', Math.random()*(500), Math.random()*(500));
+};
+setInterval(Matrix,30);
+
+		</script>
+	</body>
+</html>
